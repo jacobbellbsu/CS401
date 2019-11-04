@@ -1,16 +1,16 @@
 <?php
 class Dao {
 	
-	private $host = 'localhost';
-	private $dbName = 'testdb';
-	private $dbUsername = 'root';
-	private $dbPassword = '';
+	//private $host = 'localhost';
+	//private $dbName = 'testdb';
+	//private $dbUsername = 'root';
+	//private $dbPassword = '';
 	
 	//mysql://baa858e9ba12f1:7f821f4a@us-cdbr-iron-east-05.cleardb.net/heroku_08770357bfc5d85?reconnect=true
-	//private $host = 'us-cdbr-iron-east-05.cleardb.net';
-	//private $dbName = 'heroku_08770357bfc5d85';
-	//private $dbUsername = 'baa858e9ba12f1';
-	//private $dbPassword = '7f821f4a';
+	private $host = 'us-cdbr-iron-east-05.cleardb.net';
+	private $dbName = 'heroku_08770357bfc5d85';
+	private $dbUsername = 'baa858e9ba12f1';
+	private $dbPassword = '7f821f4a';
 	
 	public function __construct() {
 		
@@ -28,13 +28,13 @@ class Dao {
 	
 	public function isValidLogin($username, $password) {
 		$connection = $this->getConnection();
-		try {
-			$q = $connection->query("select * from user where username = {$username} and password = {$password};", PDO::FETCH_ASSOC);
-			return sizeof($q) > 0;
-		} catch(Exception $e) {
-			echo print_r($e, 1);
-			exit;
-		}
+		$queryString = "select * from user where username = :username and password = :password;";
+		$q = $connection->prepare($queryString);
+		$q->bindParam(":username", $username);
+		$q->bindParam(":password", $password);
+		$q->execute();
+		$results = $q->fetchAll();
+		return sizeof($results) > 0;
 	}
 	
 	public function getUserID($username) {
