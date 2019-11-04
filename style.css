@@ -1,0 +1,84 @@
+
+body {
+	font-family: "Arial";
+	box-sizing: content-box;
+	padding: 20px;
+	margin: auto;
+	max-width: 600px;
+}
+
+button {
+	color: white;
+	text-decoration: none;
+	background-color: #44AAFF;
+	border-radius: 15px;
+	padding: 20px;
+	margin: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+hr {
+	border: 1px solid red;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.tweet {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #CCCCCC;
+	padding: 10px;
+}
+
+.tweet_username {
+	
+}
+
+.tweet_screenname {
+	color: #AAAAAA;
+	margin-left: 20px;
+}
+
+.lastRead {
+	color: red;
+}
+
+.input_field {
+	width: 100%;
+}
+
+.header {
+	text-align: center;
+}
+
+.settings {
+	
+}
+
+.error {
+	background-color: #FF0000;
+	color: #FFFFFF;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.settings_section {
+	background-color: #CCDDFF;
+	border-radius: 20px;
+	border-color: #AABBDD;
+	border-style: solid;
+	border-width: 2px;
+	margin: 20px;
+	padding: 20px;
+}
+
+.footer {
+	color: #44AAFF;
+	text-align: center;
+}
