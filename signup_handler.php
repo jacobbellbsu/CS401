@@ -1,7 +1,7 @@
 <?php
 session_start();
 $username = trim($_POST['username']);
-$password = $_POST['password'];
+$password = md5($_POST['password'] . '9001');
 
 require_once 'Dao.php';
 $dao = new Dao();

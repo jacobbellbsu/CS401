@@ -9,6 +9,7 @@
 <html>
 	<header>
 		<title>Minimal Tweets</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" href="style.css">
 	</header>
 	<body>

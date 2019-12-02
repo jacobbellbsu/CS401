@@ -44,7 +44,7 @@ function compareTweetTimes($a, $b)
 
 function showTweets()
 {
-	$notweets = 3; //how many tweets you want to retrieve
+	$notweets = 10; //how many tweets you want to retrieve
 	$consumer_key = "rzbOBfYr7nZ3H9hUyyyEmUsyH";
 	$consumer_secret = "9I4iJfIAqEj5WfRZBFipr6I2xIHnYpefRfj27sDElGkBWmNOSY"; 
 	$oauth_token = "1180557972058996736-NqqiXgqi4SgAjNtzDP0bpXtBLhxdYi"; 
@@ -67,7 +67,6 @@ function showTweets()
 				}
 			}
 		}
-		
 	}
 
 	usort($tweet_list, "compareTweetTimes");

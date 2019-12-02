@@ -1,6 +1,8 @@
 <form>
-	Username: <input type="text" name="username" <?php if (isset($_SESSION['username'])) echo 'value="' . $_SESSION['username'] . '"' ?>>
-	Password: <input type="password" name="password">
+	<label for="username">Username:</label>
+	<input type="text" name="username" <?php if (isset($_SESSION['username'])) echo 'value="' . $_SESSION['username'] . '"' ?>>
+	<label for="password">Password:</label>
+	<input type="password" name="password">
 	<?php
 		if (isset($_SESSION['error'])) {
 			echo '<div class="error">';

@@ -9,7 +9,10 @@
 <html>
 	<header>
 		<title>Minimal Tweets - Settings</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="fade_out.js"></script>
 	</header>
 	<body>
 		<div class="header">
